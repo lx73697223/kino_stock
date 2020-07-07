@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d408aeb-3edb-47e9-a7d4-2460e387094e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/gameday.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed_data/base_data_feeder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strategy/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/email_message_sender.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/message_sender.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/open_wechat_message_sender.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/strategy_scheduler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strategy/scanning_momentum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/annotation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gameday.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gameday.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/kino_stock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kino_stock.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed_data/data_tushare.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,13 +56,37 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/utils" />
+      <recent name="$PROJECT_DIR$/messaging" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/feed_data" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.scanning_momentum">
+    <configuration name="scanning_momentum" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kino_stock" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/strategy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strategy/scanning_momentum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tushare_data_feeder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kino_stock" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scanning_momentum" />
         <item itemvalue="Python.tushare_data_feeder" />
       </list>
     </recent_temporary>
@@ -109,7 +138,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594023065649</updated>
-      <workItem from="1594023066917" duration="9932000" />
+      <workItem from="1594023066917" duration="19049000" />
     </task>
     <servers />
   </component>
@@ -121,32 +150,49 @@
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="2032" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594034464437" />
-    <state x="2188" y="314" key="FileChooserDialogImpl" timestamp="1594031832766">
+    <state x="1712" y="314" width="900" height="473" key="FileChooserDialogImpl" timestamp="1594085575503">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state x="2188" y="314" key="FileChooserDialogImpl/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594031832766" />
-    <state width="1876" height="293" key="GridCell.Tab.0.bottom" timestamp="1594034242713">
+    <state x="1712" y="314" width="900" height="473" key="FileChooserDialogImpl/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594085575503" />
+    <state width="1876" height="357" key="GridCell.Tab.0.bottom" timestamp="1594102442066">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="293" key="GridCell.Tab.0.bottom/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594034242713" />
-    <state width="1876" height="293" key="GridCell.Tab.0.center" timestamp="1594034242711">
+    <state width="1876" height="357" key="GridCell.Tab.0.bottom/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594102442066" />
+    <state width="1876" height="357" key="GridCell.Tab.0.center" timestamp="1594102442065">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="293" key="GridCell.Tab.0.center/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594034242711" />
-    <state width="1876" height="293" key="GridCell.Tab.0.left" timestamp="1594034242711">
+    <state width="1876" height="357" key="GridCell.Tab.0.center/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594102442065" />
+    <state width="1876" height="357" key="GridCell.Tab.0.left" timestamp="1594102442064">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="293" key="GridCell.Tab.0.left/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594034242711" />
-    <state width="1876" height="293" key="GridCell.Tab.0.right" timestamp="1594034242712">
+    <state width="1876" height="357" key="GridCell.Tab.0.left/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594102442064" />
+    <state width="1876" height="357" key="GridCell.Tab.0.right" timestamp="1594102442066">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="293" key="GridCell.Tab.0.right/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594034242712" />
-    <state x="1440" y="23" width="1920" height="1057" key="SettingsEditor" timestamp="1594031965963">
+    <state width="1876" height="357" key="GridCell.Tab.0.right/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594102442066" />
+    <state width="1876" height="357" key="GridCell.Tab.1.bottom" timestamp="1594102440729">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state x="1440" y="23" width="1920" height="1057" key="SettingsEditor/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594031965963" />
+    <state width="1876" height="357" key="GridCell.Tab.1.bottom/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594102440729" />
+    <state width="1876" height="357" key="GridCell.Tab.1.center" timestamp="1594102440728">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="357" key="GridCell.Tab.1.center/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594102440728" />
+    <state width="1876" height="357" key="GridCell.Tab.1.left" timestamp="1594102440727">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="357" key="GridCell.Tab.1.left/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594102440727" />
+    <state width="1876" height="357" key="GridCell.Tab.1.right" timestamp="1594102440729">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="357" key="GridCell.Tab.1.right/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594102440729" />
+    <state x="1440" y="23" width="1920" height="1057" key="SettingsEditor" timestamp="1594085598080">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1440" y="23" width="1920" height="1057" key="SettingsEditor/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594085598080" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kino_stock$data_tushare.coverage" NAME="tushare_data_feeder Coverage Results" MODIFIED="1594034242703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feed_data" />
+    <SUITE FILE_PATH="coverage/kino_stock$data_tushare.coverage" NAME="tushare_data_feeder Coverage Results" MODIFIED="1594094316258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feed_data" />
+    <SUITE FILE_PATH="coverage/kino_stock$scanning_momentum.coverage" NAME="scanning_momentum Coverage Results" MODIFIED="1594102438834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/strategy" />
   </component>
 </project>

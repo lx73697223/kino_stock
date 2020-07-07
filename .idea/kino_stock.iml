@@ -6,8 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/feed_data" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/schedule" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/strategy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/messaging" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.8 (venv-py38)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (kino_stock)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

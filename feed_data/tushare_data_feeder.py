@@ -32,11 +32,10 @@ class TushareDataFeeder(BaseDataFeeder):
         :param is_open:         是否交易 '0'休市, '1'交易
         :return: DataFrame
         """
-        df = self.__pro_api.trade_cal(
+        return self.__pro_api.trade_cal(
             exchange=exchange, start_date=str(start_date), end_date=str(end_date), is_open=is_open)
-        return df
 
-    def get_stock_list(self, is_hs=None, list_status='L', exchange=None, fields=None):
+    def get_stocks(self, is_hs=None, list_status='L', exchange=None, fields=None):
         """
         获取股票列表
         https://tushare.pro/document/2?doc_id=25
@@ -46,11 +45,9 @@ class TushareDataFeeder(BaseDataFeeder):
         :param fields:       需要的属性名称, 不填是返回所有属性
         :return: DataFrame
         """
-        df = self.__pro_api.stock_basic(
-            exchange=exchange, is_hs=is_hs, list_status=list_status, fields=fields or [])
-        return df
+        return self.__pro_api.stock_basic(exchange=exchange, is_hs=is_hs, list_status=list_status, fields=fields or [])
 
-    def get_bar(self, ts_code, asset='E', freq='D', start_date=None, end_date=None, adj=None, adjfactor=None,
+    def get_bar(self, ts_code, asset='E', freq='D', start_date=None, end_date=None, adj=None, adjfactor=True,
                 factors=None, ma=None):
         """
         获取复权行情 (1.2.26版本以上才有此接口)
@@ -62,13 +59,12 @@ class TushareDataFeeder(BaseDataFeeder):
         :param end_date:     结束日期 (YYYYMMDD)   取指定范围内的历史行情
         :param adj:          复权行情 (只针对股票)  qfq:前复权; hfq:后复权; 为空时不复权 默认None
         :param factors:      股票因子 (asset='E'时有效)  tor换手率 vr量比
-        :param adjfactor:    复权因子 (v1.2.33) 在复权数据时，如果此参数为True，返回的数据中则带复权因子，默认为False
+        :param adjfactor:    复权因子 (v1.2.33) 在复权数据时，如果此参数为True，返回的数据中则带复权因子，默认为True
         :param ma:           均线 list 支持任意合理int数值 如 [5, 20, 50]
         :return: DataFrame
         """
-        df = ts.pro_bar(ts_code=ts_code, asset=asset, freq=freq, start_date=start_date, end_date=end_date,
-                        adj=adj, adjfactor=adjfactor, factors=factors, ma=ma, api=self.__pro_api)
-        return df
+        return ts.pro_bar(ts_code=ts_code, asset=asset, freq=freq, start_date=start_date, end_date=end_date,
+                          adj=adj, adjfactor=adjfactor, factors=factors, ma=ma, api=self.__pro_api)
 
     def get_daily_basic(self, ts_code=None, trade_date=None, start_date=None, end_date=None):
         """
@@ -80,9 +76,8 @@ class TushareDataFeeder(BaseDataFeeder):
         :param end_date:     结束日期 (YYYYMMDD)   取指定范围
         :return: DataFrame
         """
-        df = self.__pro_api.query(
+        return self.__pro_api.query(
             'daily_basic', ts_code=ts_code, trade_date=trade_date, start_date=start_date, end_date=end_date)
-        return df
 
     def get_daily_md(self, codes, start_date=None, end_date=None, trade_date=None):
         """
@@ -95,9 +90,8 @@ class TushareDataFeeder(BaseDataFeeder):
         :return: DataFrame
         """
         ts_code = ','.join(codes)
-        df = self.__pro_api.query(
+        return self.__pro_api.query(
             'daily', ts_code=ts_code, trade_date=trade_date, start_date=start_date, end_date=end_date)
-        return df
 
     def get_weekly_md(self, ts_code, start_date=None, end_date=None, trade_date=None):
         """
@@ -108,9 +102,18 @@ class TushareDataFeeder(BaseDataFeeder):
         :param end_date:     结束日期 (YYYYMMDD)   取指定范围内的历史行情
         :return: DataFrame
         """
-        df = self.__pro_api.query(
+        return self.__pro_api.query(
             'weekly', ts_code=ts_code, trade_date=trade_date, start_date=start_date, end_date=end_date)
-        return df
+
+    def get_moneyflow(self, start_date=None, end_date=None, trade_date=None):
+        """
+        获取资金流向
+        :param start_date:   开始日期 (YYYYMMDD)   取指定范围      (start_date/trade_date 两个参数二选一)
+        :param end_date:     结束日期 (YYYYMMDD)   取指定范围
+        :param trade_date:   交易日期 (YYYYMMDD)   取某一天
+        :return: DataFrame
+        """
+        return self.__pro_api.query('moneyflow_hsgt', trade_date=trade_date, start_date=start_date, end_date=end_date)
 
 
 if __name__ == '__main__':
@@ -120,10 +123,10 @@ if __name__ == '__main__':
 
     ts_data_feeder = TushareDataFeeder(tushare_token=token)
 
-    """
-    data = ts_data_feeder.get_stock_list()
+    data = ts_data_feeder.get_stocks(is_hs='H', list_status='L', exchange='SSE')
     print('---', data)
 
+    """
     data = ts_data_feeder.get_trading_calendar()
     print('---', data)
 
@@ -132,7 +135,7 @@ if __name__ == '__main__':
 
     data = ts_data_feeder.get_weekly_md(ts_code='000001.SZ', start_date='20200301', end_date='20200706')
     print('---', data)
-    """
 
-    data = ts_data_feeder.get_bar(ts_code='000001.SZ', start_date='20200301', end_date='20200706')
+    data = ts_data_feeder.get_bar(ts_code='000001.SZ', start_date='20200301', end_date='20200706', adj='qfq')
     print('---', data)
+    """
