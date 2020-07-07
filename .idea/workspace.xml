@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d408aeb-3edb-47e9-a7d4-2460e387094e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/configs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/database_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/data_enums.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/database_management.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/iter_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/sql_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/time_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kino_stock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kino_stock.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy/scanning_momentum.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy/scanning_momentum.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594023065649</updated>
-      <workItem from="1594023066917" duration="21510000" />
+      <workItem from="1594023066917" duration="22375000" />
     </task>
     <servers />
   </component>
