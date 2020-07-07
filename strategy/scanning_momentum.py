@@ -28,11 +28,13 @@ if __name__ == '__main__':
 
     data_feeder = TushareDataFeeder(tushare_token="311d0faf8bece0e369373c8ab8c6f52b0f2db20614a155cb20ec0ae9")
 
-    # stocks_df = data_feeder.get_stocks(is_hs='H', list_status='L', exchange='SSE')
-    # ts_codes = stocks_df['ts_code']
-    # print(stocks_df)
+    stocks_df = data_feeder.get_stocks(is_hs='H', list_status='L', exchange='SSE')
+    print(stocks_df)
 
+    # ts_codes = stocks_df['ts_code']
+    # FIXME test
     ts_codes = ['600000.SH']
+
     for ts_code in ts_codes:
         bar_df = data_feeder.get_bar(
             ts_code=ts_code, asset='E', freq='D', start_date=start_date, end_date=end_date, adj='qfq')

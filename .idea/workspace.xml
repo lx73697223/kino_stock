@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d408aeb-3edb-47e9-a7d4-2460e387094e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/messaging/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/email_message_sender.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/message_sender.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messaging/open_wechat_message_sender.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule/strategy_scheduler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strategy/scanning_momentum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/annotation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gameday.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gameday.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/database_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/data_enums.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/database_management.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/iter_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/sql_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/time_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/kino_stock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kino_stock.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategy/scanning_momentum.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy/scanning_momentum.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +55,13 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/utils" />
+      <recent name="$PROJECT_DIR$/configs" />
+      <recent name="$PROJECT_DIR$/repository" />
       <recent name="$PROJECT_DIR$/messaging" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/repository" />
       <recent name="$PROJECT_DIR$/feed_data" />
     </key>
   </component>
@@ -138,7 +139,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594023065649</updated>
-      <workItem from="1594023066917" duration="19049000" />
+      <workItem from="1594023066917" duration="21510000" />
     </task>
     <servers />
   </component>

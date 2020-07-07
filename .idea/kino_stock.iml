@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/strategy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/messaging" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/repository" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/configs" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (kino_stock)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
