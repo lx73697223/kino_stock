@@ -8,6 +8,7 @@ import time
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
+from configs.database_config import DatabaseConfig
 from feed_data.tushare_data_feeder import TushareDataFeeder
 
 
@@ -20,6 +21,8 @@ if __name__ == '__main__':
     min_vol = 50000000         # 过滤小于min_vol的
     vol_factor = (10, 3)       # 连续3天交易量上涨10%以上
     amount_factor = (6, 3)     # 连续3天资金量上涨6%以上
+
+    # DatabaseConfig.database_engine_url = ''
 
     time_format = "%Y%m%d"
     now_time = datetime.now().timetuple()
