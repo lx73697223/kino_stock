@@ -10,7 +10,7 @@ import traceback
 from datetime import datetime
 from enum import Enum, unique
 
-from utils.annotation import singleton
+from core_utils.annotation import singleton
 from message_sender import MessageSender, MessageInfo
 
 

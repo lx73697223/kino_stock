@@ -8,12 +8,14 @@ import sys
 import pandas
 import tushare as ts
 
+from core_utils.annotation import singleton
 from base_data_feeder import BaseDataFeeder
 
 pandas.set_option('expand_frame_repr', False)   # 打印时不要折叠列
 pandas.set_option('display.max_rows', 200)      # 打印最多200行数据
 
 
+@singleton(func_name="get_singleton_str")
 class TushareDataFeeder(BaseDataFeeder):
 
     def __init__(self, tushare_token):
@@ -22,6 +24,10 @@ class TushareDataFeeder(BaseDataFeeder):
 
         # tushare需要足够的积分才能使用相应的接口: https://tushare.pro/document/1?doc_id=108
         self.__pro_api = ts.pro_api()
+
+    @staticmethod
+    def get_singleton_str(*args, **kw):
+        return kw.get('tushare_token')
 
     def get_trading_calendar(self, exchange='SSE', start_date='20200701', end_date='20200706', is_open='1'):
         """
@@ -123,19 +129,19 @@ if __name__ == '__main__':
 
     ts_data_feeder = TushareDataFeeder(tushare_token=token)
 
-    data = ts_data_feeder.get_stocks(is_hs='H', list_status='L', exchange='SSE')
-    print('---', data)
+    df = ts_data_feeder.get_stocks(is_hs='H', list_status='L', exchange='SSE')
+    print('---', df)
 
     """
-    data = ts_data_feeder.get_trading_calendar()
-    print('---', data)
+    df = ts_data_feeder.get_trading_calendar()
+    print('---', df)
 
-    data = ts_data_feeder.get_daily_md(codes=['000001.SZ', '688566.SH'], start_date='20200701', end_date='20200706')
-    print('---', data)
+    df = ts_data_feeder.get_daily_md(codes=['000001.SZ', '688566.SH'], start_date='20200701', end_date='20200706')
+    print('---', df)
 
-    data = ts_data_feeder.get_weekly_md(ts_code='000001.SZ', start_date='20200301', end_date='20200706')
-    print('---', data)
+    df = ts_data_feeder.get_weekly_md(ts_code='000001.SZ', start_date='20200301', end_date='20200706')
+    print('---', df)
 
-    data = ts_data_feeder.get_bar(ts_code='000001.SZ', start_date='20200301', end_date='20200706', adj='qfq')
-    print('---', data)
+    df = ts_data_feeder.get_bar(ts_code='000001.SZ', start_date='20200301', end_date='20200706', adj='qfq')
+    print('---', df)
     """

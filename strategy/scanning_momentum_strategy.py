@@ -8,12 +8,17 @@ import time
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from configs.database_config import DatabaseConfig
-from feed_data.tushare_data_feeder import TushareDataFeeder
+from configs.local_config import LocalConfig
+from configs.app_config import AppConfig
+from core_utils import time_utils
+from repository.dao import stock_dao, stock_bar_dao
+from strategy.base_strategy import BaseStrategy
 
 
-def run():
-    pass
+class ScanningMomentumStrategy(BaseStrategy):
+
+    def run(self):
+        pass
 
 
 if __name__ == '__main__':
@@ -21,24 +26,15 @@ if __name__ == '__main__':
     min_vol = 50000000         # 过滤小于min_vol的
     vol_factor = (10, 3)       # 连续3天交易量上涨10%以上
     amount_factor = (6, 3)     # 连续3天资金量上涨6%以上
-
-    # DatabaseConfig.database_engine_url = ''
+    ts_codes = ['600000.SH']
 
     time_format = "%Y%m%d"
     now_time = datetime.now().timetuple()
     end_date = time.strftime(time_format, datetime.now().timetuple())
     start_date = time.strftime(time_format, (datetime.now() + relativedelta(days=-scan_days)).timetuple())
 
-    data_feeder = TushareDataFeeder(tushare_token="311d0faf8bece0e369373c8ab8c6f52b0f2db20614a155cb20ec0ae9")
-
-    stocks_df = data_feeder.get_stocks(is_hs='H', list_status='L', exchange='SSE')
-    print(stocks_df)
-
-    # ts_codes = stocks_df['ts_code']
-    # FIXME test
-    ts_codes = ['600000.SH']
-
     for ts_code in ts_codes:
-        bar_df = data_feeder.get_bar(
-            ts_code=ts_code, asset='E', freq='D', start_date=start_date, end_date=end_date, adj='qfq')
-        print(bar_df)
+        pass
+        # bar_df = data_feeder.get_bar(
+        #     ts_code=ts_code, asset='E', freq='D', start_date=start_date, end_date=end_date, adj='qfq')
+        # print(bar_df)

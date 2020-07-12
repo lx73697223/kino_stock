@@ -6,48 +6,62 @@ import os
 import json
 import traceback
 
-from utils.logging_utils import log
-from utils import file_utils, import_utils
+from core_utils.logging_utils import log
+from core_utils import file_utils, import_utils
 
 
 class LocalConfig(object):
     # 程序数据文件存放根路径
-    FIXED_ROOT_PATH = '/userdata'
-
-    # 本地配置文件存放目录
-    CONFIGS_BASE_PATH = os.path.join(FIXED_ROOT_PATH, 'configs')
-    # 程序代码存放路径
-    application_root_path = FIXED_ROOT_PATH
+    fixed_root_path = '/Users/lixiang/userdata'
     # 数据保存根目录
-    data_root_path = FIXED_ROOT_PATH
+    data_root_path = None
+    # 程序代码存放路径
+    application_root_path = None
+    # 初始化配置文件路径
+    config_root_path = None
+    # 初始化配置文件路径
+    init_config_file_path = None
 
     @classmethod
-    def get_local_config_path(cls):
-        return os.path.join(cls.CONFIGS_BASE_PATH, "kino_stock_config.json")
+    def get_application_root_path(cls):
+        return cls.application_root_path or cls.fixed_root_path
+
+    @classmethod
+    def get_config_root_path(cls):
+        return cls.config_root_path or os.path.join(cls.fixed_root_path, 'configs')
+
+    @classmethod
+    def get_init_config_file_path(cls):
+        return cls.init_config_file_path or os.path.join(cls.get_config_root_path(), 'kino_stock_config.json')
+
+    @classmethod
+    def get_data_root_path(cls):
+        return cls.data_root_path or cls.fixed_root_path
 
     @classmethod
     def get_output_base_path(cls):
-        return file_utils.mk_if_not_exists(os.path.join(cls.data_root_path, 'output_data'))
+        return file_utils.mk_if_not_exists(os.path.join(cls.get_data_root_path(), 'output_data'))
 
     @classmethod
     def get_logging_base_path(cls):
         return file_utils.mk_if_not_exists(os.path.join(cls.get_output_base_path(), 'logs'))
 
     @classmethod
-    def get_log_file_path(cls, file_name):
-        return os.path.join(cls.get_logging_base_path(), '{}.log'.format(file_name))
+    def get_log_file_path(cls, name):
+        return os.path.join(cls.get_logging_base_path(), '{}.log'.format(name))
 
 
 @log(log_args=True)
 def load_local_config(setter_configs=False):
-    config_file_path = LocalConfig.get_local_config_path()
-
+    config_file_path = LocalConfig.get_init_config_file_path()
     if os.path.exists(config_file_path):
         with open(config_file_path, 'r') as f:
             config_data = json.load(f)
         if setter_configs:
             setter_config(config_data)
         return config_data
+    else:
+        print('--- config file not exits:', config_file_path)
 
 
 def setter_config(data):

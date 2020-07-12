@@ -12,7 +12,7 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-from utils.annotation import singleton
+from core_utils.annotation import singleton
 from message_sender import MessageSender, MessageInfo
 
 

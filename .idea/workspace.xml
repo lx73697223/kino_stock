@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4d408aeb-3edb-47e9-a7d4-2460e387094e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core_utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/dao/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/dao/stock_bar_dao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/dao/stock_dao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/service/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/service/stock_bar_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/service/stock_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/ddl_sql/create_stock_bar_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/ddl_sql/create_stock_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strategy/base_strategy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/stock_bar_csv_fixer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/sync_stock_bar_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/sync_stocks_tool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kino_stock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kino_stock.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/import_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/import_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/database_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/database_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/local_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/local_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/email_message_sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/email_message_sender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messaging/open_wechat_message_sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/open_wechat_message_sender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/database_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/database_management.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule/strategy_scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/strategy_scheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategy/scanning_momentum.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy/scanning_momentum_strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/app_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/annotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/annotation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/file_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/file_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/import_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/import_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/iter_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/iter_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/logging_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/sql_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/sql_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/time_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/time_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,14 +76,14 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,20 +93,20 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/utils" />
-      <recent name="$PROJECT_DIR$/configs" />
-      <recent name="$PROJECT_DIR$/repository" />
-      <recent name="$PROJECT_DIR$/messaging" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/repository" />
       <recent name="$PROJECT_DIR$/feed_data" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$/repository/service" />
+      <recent name="$PROJECT_DIR$/repository/dao" />
+      <recent name="$PROJECT_DIR$/resource/ddl" />
+      <recent name="$PROJECT_DIR$/utils" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.scanning_momentum">
-    <configuration name="scanning_momentum" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.stock_bar_csv_fixer">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kino_stock" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -64,12 +114,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/strategy" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strategy/scanning_momentum.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,7 +127,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tushare_data_feeder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="database_pyodbc_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kino_stock" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -86,12 +135,74 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/feed_data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/database_pyodbc_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stock_bar_csv_fixer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kino_stock" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/stock_bar_csv_fixer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sync_stock_bar_tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kino_stock" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/sync_stock_bar_tool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sync_stocks_tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kino_stock" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/sync_stocks_tool.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -102,22 +213,13 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.scanning_momentum" />
-        <item itemvalue="Python.tushare_data_feeder" />
+        <item itemvalue="Python.stock_bar_csv_fixer" />
+        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.sync_stock_bar_tool" />
+        <item itemvalue="Python.sync_stocks_tool" />
+        <item itemvalue="Python.database_pyodbc_test" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -136,54 +238,75 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="2032" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594034464437">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="2032" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594034464437" />
-    <state x="1712" y="314" width="900" height="473" key="FileChooserDialogImpl" timestamp="1594085575503">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state x="204" y="264" width="900" height="473" key="FileChooserDialogImpl" timestamp="1594454987621">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="1712" y="314" width="900" height="473" key="FileChooserDialogImpl/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594085575503" />
-    <state width="1876" height="198" key="GridCell.Tab.0.bottom" timestamp="1594189003184">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state x="204" y="264" key="FileChooserDialogImpl/0.23.1440.877@0.23.1440.877" timestamp="1594454987621" />
+    <state width="1419" height="278" key="GridCell.Tab.0.bottom" timestamp="1594574134794">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.0.bottom/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003184" />
-    <state width="1876" height="198" key="GridCell.Tab.0.center" timestamp="1594189003183">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1419" height="278" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594574134793" />
+    <state width="1419" height="278" key="GridCell.Tab.0.center" timestamp="1594574134793">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.0.center/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003183" />
-    <state width="1876" height="198" key="GridCell.Tab.0.left" timestamp="1594189003183">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1419" height="278" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594574134793" />
+    <state width="1419" height="278" key="GridCell.Tab.0.left" timestamp="1594574134792">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.0.left/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003183" />
-    <state width="1876" height="198" key="GridCell.Tab.0.right" timestamp="1594189003184">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1419" height="278" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594574134792" />
+    <state width="1419" height="278" key="GridCell.Tab.0.right" timestamp="1594574134793">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.0.right/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003184" />
-    <state width="1876" height="198" key="GridCell.Tab.1.bottom" timestamp="1594189003186">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1419" height="278" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594574134793" />
+    <state width="1419" height="286" key="GridCell.Tab.1.bottom" timestamp="1594548073959">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.1.bottom/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003186" />
-    <state width="1876" height="198" key="GridCell.Tab.1.center" timestamp="1594189003185">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1419" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594548073959" />
+    <state width="1419" height="286" key="GridCell.Tab.1.center" timestamp="1594548073958">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.1.center/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003185" />
-    <state width="1876" height="198" key="GridCell.Tab.1.left" timestamp="1594189003185">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1419" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1594548073958" />
+    <state width="1419" height="286" key="GridCell.Tab.1.left" timestamp="1594548073958">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.1.left/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003185" />
-    <state width="1876" height="198" key="GridCell.Tab.1.right" timestamp="1594189003186">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1419" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1594548073958" />
+    <state width="1419" height="286" key="GridCell.Tab.1.right" timestamp="1594548073959">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.1.right/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003186" />
-    <state x="1440" y="23" width="1920" height="1057" key="SettingsEditor" timestamp="1594085598080">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1419" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1594548073959" />
+    <state x="0" y="23" width="1920" height="1057" key="SettingsEditor" timestamp="1594541521307">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="1440" y="23" width="1920" height="1057" key="SettingsEditor/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594085598080" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kino_stock$data_tushare.coverage" NAME="tushare_data_feeder Coverage Results" MODIFIED="1594094316258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feed_data" />
-    <SUITE FILE_PATH="coverage/kino_stock$scanning_momentum.coverage" NAME="scanning_momentum Coverage Results" MODIFIED="1594102438834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/strategy" />
+    <state x="0" y="23" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1594541521307" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1594542225013">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1594542225013" />
   </component>
 </project>

@@ -6,9 +6,9 @@
 
 import pandas
 
-from utils.annotation import singleton
-from utils.logging_utils import LoggingUtil
-from utils import time_utils, sql_utils, iter_utils
+from core_utils.annotation import singleton
+from core_utils.logging_utils import LoggingUtil
+from core_utils import time_utils, sql_utils, iter_utils
 from configs.database_config import DatabaseConfig
 from data_enums import TableExist
 
@@ -22,12 +22,12 @@ class DatabaseManagement(object):
 
     @staticmethod
     def get_singleton_str(*args, **kw):
-        return DatabaseConfig.database_engine_url
+        return DatabaseConfig.engine_url
 
     def save_data_frame(self, data_frame, table_name, index_label=None, index=True, if_table_exists=TableExist.fail,
                         chunk_size=50, dtype=None, on_ignore_dup_key=False, unique_index_columns=None):
         """
-        DataFrame to sql
+        DataFrame to resource
         :param data_frame: save data
         :param table_name: table name
         :param index_label: index column name
@@ -55,7 +55,7 @@ class DatabaseManagement(object):
 
     def query_data_frame_all(self, table_name, index_col=None, columns=None, chunk_size=None, parse_dates=None,
                              coerce_float=True, check_has_table=False):
-        """read sql table into to DataFrame"""
+        """read resource table into to DataFrame"""
         if not check_has_table or self.__engine.has_table(table_name):
             return pandas.read_sql_table(table_name=table_name, con=self.__engine, index_col=index_col, columns=columns,
                                          chunksize=chunk_size, parse_dates=parse_dates, coerce_float=coerce_float)
@@ -64,13 +64,13 @@ class DatabaseManagement(object):
 
     def query_data_frame_by_sql(self, sql, params=None, index_col=None, columns=None, chunk_size=None, parse_dates=None,
                                 coerce_float=True):
-        """read sql into to DataFrame"""
+        """read resource into to DataFrame"""
         return pandas.read_sql(sql=sql, con=self.__engine, index_col=index_col, coerce_float=coerce_float,
                                params=params, parse_dates=parse_dates, columns=columns, chunksize=chunk_size)
 
     def query_data_frame(self, table_name, sql_wheres=None, order_sql='', index_col=None, columns=None, params=None,
                          chunk_size=None, parse_dates=None, coerce_float=True, check_has_table=False):
-        """read sql into to DataFrame"""
+        """read resource into to DataFrame"""
         if not check_has_table or self.__engine.has_table(table_name):
             columns_str = "[{}]".format('],['.join(columns)) if iter_utils.get_iter(columns) else "*"
             where_sql = sql_utils.where_sql_joiner(sql_wheres)

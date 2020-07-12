@@ -12,8 +12,8 @@ import zipfile
 import tarfile
 import traceback
 
-from utils import time_utils
-from utils.logging_utils import LoggingUtil, log
+from core_utils import time_utils
+from core_utils.logging_utils import LoggingUtil, log
 
 
 logger = LoggingUtil.get_default_logger()
