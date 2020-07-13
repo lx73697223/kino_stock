@@ -9,3 +9,7 @@ class AppConfig(object):
     machine_tag = 'basic'
 
     tushare_token = '311d0faf8bece0e369373c8ab8c6f52b0f2db20614a155cb20ec0ae9'
+
+    @classmethod
+    def get_app_tag(cls):
+        return '-'.join((cls.profile, cls.machine_tag))

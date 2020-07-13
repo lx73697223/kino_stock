@@ -21,4 +21,3 @@ if __name__ == '__main__':
 
     stock_bar_service.sync_stock_bar(start_date=start_date, end_date=end_date, freq=freq, adj=adj, ts_codes=ts_codes,
                                      csv_path_format=csv_path_format)
-

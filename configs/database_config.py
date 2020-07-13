@@ -12,7 +12,7 @@ class DatabaseConfig(object):
     autocommit = True
 
     stock_table_name_format = 't_stock'
-    bar_table_name_format = 't_stock_bar_%s'
+    bar_table_name_format = 't_stock_bar'
 
     @classmethod
     def create_connection(cls, engine_url=None, echo=None, autocommit=True):

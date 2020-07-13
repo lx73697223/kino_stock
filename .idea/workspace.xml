@@ -20,40 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d408aeb-3edb-47e9-a7d4-2460e387094e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/dao/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/dao/stock_bar_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/dao/stock_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/service/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/service/stock_bar_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/service/stock_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/ddl_sql/create_stock_bar_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/ddl_sql/create_stock_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strategy/base_strategy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/stock_bar_csv_fixer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/sync_stock_bar_tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/sync_stocks_tool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kino_stock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kino_stock.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/message_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messaging/message_send_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/app_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/app_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/database_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/database_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/local_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/local_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed_data/tushare_data_feeder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/email_message_sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/email_message_sender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/open_wechat_message_sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/open_wechat_message_sender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/database_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/database_management.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule/strategy_scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/strategy_scheduler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy/scanning_momentum.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy/scanning_momentum_strategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/app_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/annotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/annotation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/file_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/file_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/import_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/import_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/iter_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/iter_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/logging_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/sql_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/sql_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/time_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_utils/time_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/messaging" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -98,14 +70,14 @@
       <recent name="$PROJECT_DIR$/feed_data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/messaging" />
+      <recent name="$PROJECT_DIR$/configs" />
       <recent name="$PROJECT_DIR$/tools" />
       <recent name="$PROJECT_DIR$/repository/service" />
       <recent name="$PROJECT_DIR$/repository/dao" />
-      <recent name="$PROJECT_DIR$/resource/ddl" />
-      <recent name="$PROJECT_DIR$/utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.stock_bar_csv_fixer">
+  <component name="RunManager" selected="Python.sync_stock_bar_tool">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kino_stock" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,9 +185,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sync_stock_bar_tool" />
         <item itemvalue="Python.stock_bar_csv_fixer" />
         <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.sync_stock_bar_tool" />
         <item itemvalue="Python.sync_stocks_tool" />
         <item itemvalue="Python.database_pyodbc_test" />
       </list>
@@ -259,26 +231,26 @@
     </state>
     <state x="1712" y="314" width="900" height="473" key="FileChooserDialogImpl/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594085575503" />
     <state x="204" y="264" key="FileChooserDialogImpl/0.23.1440.877@0.23.1440.877" timestamp="1594454987621" />
-    <state width="1419" height="278" key="GridCell.Tab.0.bottom" timestamp="1594574134794">
+    <state width="1419" height="278" key="GridCell.Tab.0.bottom" timestamp="1594659989178">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.0.bottom/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003184" />
-    <state width="1419" height="278" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594574134793" />
-    <state width="1419" height="278" key="GridCell.Tab.0.center" timestamp="1594574134793">
+    <state width="1419" height="278" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594659989178" />
+    <state width="1419" height="278" key="GridCell.Tab.0.center" timestamp="1594659989177">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.0.center/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003183" />
-    <state width="1419" height="278" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594574134793" />
-    <state width="1419" height="278" key="GridCell.Tab.0.left" timestamp="1594574134792">
+    <state width="1419" height="278" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594659989177" />
+    <state width="1419" height="278" key="GridCell.Tab.0.left" timestamp="1594659989177">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.0.left/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003183" />
-    <state width="1419" height="278" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594574134792" />
-    <state width="1419" height="278" key="GridCell.Tab.0.right" timestamp="1594574134793">
+    <state width="1419" height="278" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594659989177" />
+    <state width="1419" height="278" key="GridCell.Tab.0.right" timestamp="1594659989178">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1876" height="198" key="GridCell.Tab.0.right/0.23.1440.877/-1885.23.1885.1057/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594189003184" />
-    <state width="1419" height="278" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594574134793" />
+    <state width="1419" height="278" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594659989178" />
     <state width="1419" height="286" key="GridCell.Tab.1.bottom" timestamp="1594548073959">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
