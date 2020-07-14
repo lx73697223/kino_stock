@@ -50,6 +50,11 @@ class LocalConfig(object):
     def get_log_file_path(cls, name):
         return os.path.join(cls.get_logging_base_path(), '{}.log'.format(name))
 
+    @classmethod
+    def get_stock_bar_csv_tmp_path_format(cls, adj, freq, start_date, end_date):
+        return os.path.join(LocalConfig.get_output_base_path(),
+                            'bar-{}-%s.csv'.format('-'.join(str(x) for x in (adj, freq, start_date, end_date))))
+
 
 @log(log_args=True)
 def load_local_config(setter_configs=False):

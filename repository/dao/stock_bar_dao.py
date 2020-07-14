@@ -6,8 +6,9 @@ from repository.database_management import DatabaseManagement
 
 
 def save_stock_bar_df(df):
-    DatabaseManagement().save_data_frame(
-        df, table_name=DatabaseConfig.get_bar_table_name(), index=False, if_table_exists=TableExist.append)
+    if df is not None and len(df) > 0:
+        DatabaseManagement().save_data_frame(
+            df, table_name=DatabaseConfig.get_bar_table_name(), index=False, if_table_exists=TableExist.append)
 
 
 def get_stock_bar(ts_codes, start_date, end_date, freq="D", adj="qfq", columns=None, order_by=None):
