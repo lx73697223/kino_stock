@@ -16,7 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/repository/dao" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/repository/service" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.8 (py38)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (venv-py38)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

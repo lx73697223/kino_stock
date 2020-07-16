@@ -11,24 +11,28 @@ from core_utils import file_utils, import_utils
 
 
 class LocalConfig(object):
+    project_name = 'kino_stock'
+
     # 程序数据文件存放根路径
-    fixed_root_path = '/Users/lixiang/userdata'
-    # 数据保存根目录
-    data_root_path = None
+    root_path = None
+
     # 程序代码存放路径
     application_root_path = None
+
     # 初始化配置文件路径
     config_root_path = None
-    # 初始化配置文件路径
     init_config_file_path = None
+
+    # 数据保存根目录
+    data_root_path = None
 
     @classmethod
     def get_application_root_path(cls):
-        return cls.application_root_path or cls.fixed_root_path
+        return cls.application_root_path or cls.root_path
 
     @classmethod
     def get_config_root_path(cls):
-        return cls.config_root_path or os.path.join(cls.fixed_root_path, 'configs')
+        return cls.config_root_path or os.path.join(cls.root_path, 'configs')
 
     @classmethod
     def get_init_config_file_path(cls):
@@ -36,7 +40,7 @@ class LocalConfig(object):
 
     @classmethod
     def get_data_root_path(cls):
-        return cls.data_root_path or cls.fixed_root_path
+        return cls.data_root_path or cls.root_path
 
     @classmethod
     def get_output_base_path(cls):
@@ -57,9 +61,14 @@ class LocalConfig(object):
 
 
 @log(log_args=True)
-def load_local_config(setter_configs=False):
+def load_local_config(setter_configs=False, root_path=None):
+    if root_path:
+        LocalConfig.root_path = root_path
+    else:
+        LocalConfig.root_path = __file__[:__file__.find(LocalConfig.project_name)]
+
     config_file_path = LocalConfig.get_init_config_file_path()
-    if os.path.exists(config_file_path):
+    if os.path.isfile(config_file_path):
         with open(config_file_path, 'r') as f:
             config_data = json.load(f)
         if setter_configs:

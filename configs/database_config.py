@@ -8,17 +8,17 @@ from sqlalchemy.orm import sessionmaker
 
 class DatabaseConfig(object):
     engine_url = None
-    engine_echo = True
+    echo = True
     autocommit = True
 
     stock_table_name_format = 't_stock'
-    bar_table_name_format = 't_stock_bar'
+    stock_bar_table_name_format = 't_stock_bar'
 
     @classmethod
     def create_connection(cls, engine_url=None, echo=None, autocommit=True):
         """创建数据库连接"""
         engine_url = engine_url or cls.engine_url
-        echo = echo if echo is not None else cls.engine_echo
+        echo = echo if echo is not None else cls.echo
         autocommit = autocommit if autocommit is not None else cls.autocommit
 
         engine = sqlalchemy.create_engine(engine_url, echo=echo)
@@ -30,5 +30,5 @@ class DatabaseConfig(object):
         return cls.stock_table_name_format
 
     @classmethod
-    def get_bar_table_name(cls):
-        return cls.bar_table_name_format
+    def get_stock_bar_table_name(cls):
+        return cls.stock_bar_table_name_format
