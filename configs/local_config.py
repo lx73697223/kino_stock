@@ -56,7 +56,7 @@ class LocalConfig(object):
 
     @classmethod
     def get_stock_bar_csv_tmp_path_format(cls, adj, freq, start_date, end_date):
-        return os.path.join(LocalConfig.get_output_base_path(),
+        return os.path.join(LocalConfig.get_output_base_path(), 'stock_bar',
                             'bar-{}-%s.csv'.format('-'.join(str(x) for x in (adj, freq, start_date, end_date))))
 
 
