@@ -7,6 +7,7 @@
 还要看分时图的情况 判断是否大资金在吸取筹码
 """
 
+import pandas
 import time
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
@@ -14,6 +15,9 @@ from dateutil.relativedelta import relativedelta
 from configs.local_config import load_local_config
 from repository.dao import stock_bar_dao, stock_dao
 from strategy.base_strategy import BaseStrategy
+
+pandas.set_option('expand_frame_repr', False)
+pandas.set_option('display.max_rows', 200)
 
 
 class ScanningMomentumStrategy(BaseStrategy):
