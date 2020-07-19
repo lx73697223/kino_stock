@@ -7,5 +7,5 @@ class BaseStrategy(object):
     def __init__(self):
         pass
 
-    def run(self):
+    def get_signals(self):
         pass

@@ -14,7 +14,7 @@ def where_sql_joiner(sql_wheres):
 def range_where(start, end, column_name):
     _where = []
     if start is not None:
-        _where.append("[{}] >= '{}'".format(column_name, start))
+        _where.append("{} >= '{}'".format(column_name, start))
     if end is not None:
-        _where.append("[{}] <= '{}'".format(column_name, end))
+        _where.append("{} <= '{}'".format(column_name, end))
     return _where

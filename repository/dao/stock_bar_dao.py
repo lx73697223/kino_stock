@@ -13,8 +13,8 @@ def save_stock_bar_df(df):
 def get_stock_bar(ts_codes, start_date, end_date, freq="D", adj="qfq", columns=None, order_by=None):
     sql_wheres = sql_utils.range_where(start_date, end_date, "trade_date")
     sql_wheres.append("ts_code in ({})".format(','.join(["'%s'" % s for s in ts_codes])))
-    sql_wheres.append("freq = {}".format(freq))
-    sql_wheres.append("adj = {}".format(adj))
+    sql_wheres.append("freq = '{}'".format(freq))
+    sql_wheres.append("adj = '{}'".format(adj))
 
     order_sql = "order by {}".format(order_by) if order_by else ''
 
