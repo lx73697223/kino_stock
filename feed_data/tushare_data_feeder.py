@@ -69,7 +69,7 @@ class TushareDataFeeder(BaseDataFeeder):
         :param ma:           均线 list 支持任意合理int数值 如 [5, 20, 50]
         :return: DataFrame
         """
-        return ts.pro_bar(ts_code=ts_code, asset=asset, freq=freq, start_date=start_date, end_date=end_date,
+        return ts.pro_bar(ts_code=ts_code, asset=asset, freq=freq, start_date=str(start_date), end_date=str(end_date),
                           adj=adj, adjfactor=adjfactor, factors=factors, ma=ma, api=self.__pro_api)
 
     def get_daily_basic(self, ts_code=None, trade_date=None, start_date=None, end_date=None):

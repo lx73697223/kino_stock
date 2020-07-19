@@ -20,3 +20,7 @@ def get_stock_bar(ts_codes, start_date, end_date, freq="D", adj="qfq", columns=N
 
     return DatabaseManagement().query_data_frame(
         DatabaseConfig.get_stock_bar_table_name(), columns=columns, sql_wheres=sql_wheres, order_sql=order_sql)
+
+
+def get_max_index(index_col="trade_date"):
+    return DatabaseManagement().query_max_index(DatabaseConfig.get_stock_bar_table_name(), index_col=index_col)

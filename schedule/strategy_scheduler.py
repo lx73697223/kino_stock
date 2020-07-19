@@ -16,7 +16,7 @@ if __name__ == '__main__':
     cur_ymd = time_utils.delta_and_format_time(_format="%Y%m%d")
 
     # 定时打印一下
-    scheduler.add_job(name='heartbeat', func=heartbeat, args=(cur_ymd,), seconds=30, trigger='interval')
+    scheduler.add_job(name='heartbeat', func=heartbeat, args=(cur_ymd,), seconds=50, trigger='interval')
 
     # 同步每天的股票日K数据
     scheduler.add_job(name='sync_stock_bar', func=stock_bar_service.sync_stock_bar,

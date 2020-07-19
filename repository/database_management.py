@@ -82,8 +82,8 @@ class DatabaseManagement(object):
 
     def query_max_index(self, table_name, index_col, check_has_table=False):
         if not check_has_table or self.__engine.has_table(table_name):
-            sql = "SELECT MAX([{}]) AS max_index FROM {}".format(index_col, table_name)
-            return self.execute_sql(sql).scalar()
+            sql = "SELECT MAX({}) AS max_index FROM {}".format(index_col, table_name)
+            return self.execute_sql(sql)[0].scalar()
         else:
             self.logger.warning('{} not exist'.format(table_name))
 
@@ -122,14 +122,12 @@ class DatabaseManagement(object):
 
     def execute_sql(self, sql):
         if sql:
+            result = []
             with self.__engine.begin() as conn:
-                if iter_utils.get_iter(sql):
-                    result = []
-                    for s in sql:
-                        result.append(conn.execute(s))
-                else:
-                    result = conn.execute(sql)
+                for s in iter_utils.get_iter(sql):
+                    result.append(conn.execute(s))
             return result
+
 
     def add_obj(self, obj):
         """添加"""

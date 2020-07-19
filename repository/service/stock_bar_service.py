@@ -38,7 +38,7 @@ def sync_stock_bar(start_date, end_date, freq='D', adj='qfq', ts_codes=None, tem
             if not csv_path or not os.path.exists(csv_path):
                 tsd = tsd or TushareDataFeeder(tushare_token=AppConfig.tushare_token)
                 bar_df = tsd.get_bar(ts_code=ts_code, freq=freq, adj=adj, start_date=start_date, end_date=end_date)
-                if csv_path:
+                if bar_df is not None and len(bar_df) > 0 and csv_path:
                     bar_df['freq'] = freq
                     bar_df['adj'] = adj
                     bar_df.to_csv(csv_path)
