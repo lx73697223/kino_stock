@@ -6,8 +6,8 @@ import os
 import json
 import traceback
 
-from core_utils.logging_utils import log
-from core_utils import file_utils, import_utils
+from com.kino.stock.common_utils.logging_utils import log
+from com.kino.stock.common_utils import file_utils, import_utils
 
 
 class LocalConfig(object):
@@ -88,7 +88,8 @@ def setter_config(data):
                 if obj_by_name.__contains__(obj_name):
                     obj = obj_by_name.get(obj_name)
                 else:
-                    obj = obj_by_name.setdefault(obj_name, import_utils.import_configs_module(obj_name))
+                    obj = obj_by_name.setdefault(
+                        obj_name, import_utils.import_configs_module(obj_name, package_name="com.kino.stock.configs"))
 
                 if isinstance(value, str):
                     if value.startswith('[enum]'):

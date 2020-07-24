@@ -2,8 +2,8 @@
 import os
 import pandas
 
-from core_utils import time_utils
-from core_utils.logging_utils import LoggingUtil
+from common_utils import time_utils
+from common_utils.logging_utils import LoggingUtil
 from configs.app_config import AppConfig
 from repository.dao import stock_dao
 from feed_data.tushare_data_feeder import TushareDataFeeder

@@ -10,7 +10,7 @@ import traceback
 from datetime import datetime
 from enum import Enum, unique
 
-from core_utils.annotation import singleton
+from com.kino.stock.common_utils.annotation import singleton
 from message_sender import MessageSender, MessageInfo
 
 
@@ -60,8 +60,9 @@ class OpenWechatMessageSender(MessageSender):
             self.access_token = requests.get(self.access_token_url, timeout=30).json().get("access_token")
             self.access_token_time = datetime.now()
             return self.access_token
-        except Exception:
+        except Exception as e:
             traceback.print_exc()
+            self.logger.exception(e)
 
     def send(self, message_info):
         try:

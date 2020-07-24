@@ -15,6 +15,6 @@ def import_enum(name):
     return getattr(importlib.import_module(module_name), class_name)(value)
 
 
-def import_configs_module(module_name, package_name="configs"):
+def import_configs_module(module_name, package_name):
     """通过模块名动态导入.configs包中的类"""
     return getattr(importlib.import_module("{}.{}".format(package_name, module_name)), get_title_name(module_name))

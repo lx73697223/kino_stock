@@ -3,9 +3,9 @@
 
 import sys
 
-from core_utils import time_utils
-from repository.dao import stock_bar_dao
-from repository.service import stock_bar_service
+from com.kino.stock.common_utils import time_utils
+from com.kino.stock.repository.dao import stock_bar_dao
+from com.kino.stock.repository.service import stock_bar_service
 
 
 if __name__ == '__main__':

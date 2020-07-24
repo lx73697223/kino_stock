@@ -12,9 +12,9 @@ import time
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from configs.local_config import load_local_config
-from repository.dao import stock_bar_dao, stock_dao
-from strategy.base_strategy import BaseStrategy
+from com.kino.stock.configs.local_config import load_local_config
+from com.kino.stock.repository.dao import stock_bar_dao, stock_dao
+from base_strategy import BaseStrategy
 
 pandas.set_option('expand_frame_repr', False)
 pandas.set_option('display.max_rows', 200)

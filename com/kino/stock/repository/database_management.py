@@ -6,23 +6,24 @@
 
 import pandas
 
-from core_utils.annotation import singleton
-from core_utils.logging_utils import LoggingUtil
-from core_utils import time_utils, sql_utils, iter_utils
-from configs.database_config import DatabaseConfig
+from com.kino.stock.common_utils.annotation import singleton
+from com.kino.stock.common_utils.logging_utils import LoggingUtil
+from com.kino.stock.common_utils import iter_utils, sql_utils, time_utils
+from com.kino.stock.configs.database_config import DatabaseConfig
 from data_enums import TableExist
 
 
 @singleton(func_name="get_singleton_str")
 class DatabaseManagement(object):
 
-    def __init__(self):
+    def __init__(self, engine_url):
         self.logger = LoggingUtil.get_default_logger()
-        self.__engine, self.__session = DatabaseConfig.create_connection()
+        self.__engine_url = engine_url
+        self.__engine, self.__session = DatabaseConfig.create_connection(engine_url)
 
     @staticmethod
     def get_singleton_str(*args, **kw):
-        return DatabaseConfig.engine_url
+        return kw.get('engine_url')
 
     def save_data_frame(self, data_frame, table_name, index_label=None, index=True, if_table_exists=TableExist.fail,
                         chunk_size=50, dtype=None, on_ignore_dup_key=False, unique_index_columns=None):
@@ -127,7 +128,6 @@ class DatabaseManagement(object):
                 for s in iter_utils.get_iter(sql):
                     result.append(conn.execute(s))
             return result
-
 
     def add_obj(self, obj):
         """添加"""

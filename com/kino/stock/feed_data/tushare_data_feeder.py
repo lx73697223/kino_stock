@@ -8,7 +8,7 @@ import sys
 import pandas
 import tushare as ts
 
-from core_utils.annotation import singleton
+from com.kino.stock.common_utils.annotation import singleton
 from base_data_feeder import BaseDataFeeder
 
 pandas.set_option('expand_frame_repr', False)   # 打印时不要折叠列

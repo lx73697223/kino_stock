@@ -4,8 +4,8 @@
 import os
 import sys
 
-from configs.local_config import LocalConfig
-from repository.service import stock_service
+from com.kino.stock.configs.local_config import LocalConfig
+from com.kino.stock.repository.service import stock_service
 
 
 if __name__ == '__main__':

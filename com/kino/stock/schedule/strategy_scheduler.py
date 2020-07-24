@@ -2,8 +2,8 @@
 from apscheduler.schedulers.background import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 
-from core_utils import time_utils
-from repository.service import stock_bar_service
+from com.kino.stock.common_utils import time_utils
+from com.kino.stock.repository.service import stock_bar_service
 
 
 def heartbeat(date_ymd):
