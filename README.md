@@ -1,9 +1,9 @@
 # 股票小作手
 
-- common_utils            跟业务无关的普通工具函数
+- utils                   工具类或函数
 - configs                  配置类. 可通过 local_config.LocalConfig.init_config_file_path 属性定位的配置文件定义
 - messaging               消息/通知发送工具
-- feed_data               获取第三方数据
+- data_feeder             获取第三方数据
 - repository              数据存储工具
 - strategy                策略/算法
 - schedule                定时任务

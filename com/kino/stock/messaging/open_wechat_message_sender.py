@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 发送微信公众号模版消息
 """
@@ -10,8 +8,8 @@ import traceback
 from datetime import datetime
 from enum import Enum, unique
 
-from com.kino.stock.common_utils.annotation import singleton
-from message_sender import MessageSender, MessageInfo
+from com.kino.stock.utils.annotation import singleton
+from com.kino.stock.messaging.message_sender import MessageSender, MessageInfo
 
 
 @unique

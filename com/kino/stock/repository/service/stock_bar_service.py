@@ -1,12 +1,11 @@
-
 import os
 import pandas
 
-from configs.local_config import LocalConfig
-from configs.app_config import AppConfig
-from common_utils.logging_utils import LoggingUtil
-from repository.dao import stock_dao, stock_bar_dao
-from feed_data.tushare_data_feeder import TushareDataFeeder
+from com.kino.stock.configs.app_config import AppConfig
+from com.kino.stock.configs.local_config import LocalConfig
+from com.kino.stock.utils.logging_utils import LoggingUtil
+from com.kino.stock.repository.dao import stock_dao, stock_bar_dao
+from com.kino.stock.data_feeder.tushare_data_feeder import TushareDataFeeder
 
 
 logger = LoggingUtil.get_default_logger()

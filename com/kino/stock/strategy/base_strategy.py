@@ -1,5 +1,6 @@
-
-"""策略基类"""
+"""
+策略基类
+"""
 
 
 class BaseStrategy(object):

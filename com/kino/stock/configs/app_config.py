@@ -1,5 +1,6 @@
-
-"""程序环境配置"""
+"""
+程序环境配置
+"""
 
 
 class AppConfig(object):

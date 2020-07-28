@@ -1,5 +1,4 @@
-
-from com.kino.stock.common_utils import sql_utils
+from com.kino.stock.utils import sql_utils
 from com.kino.stock.configs.database_config import DatabaseConfig
 from com.kino.stock.repository.data_enums import TableExist
 from com.kino.stock.repository.database_management import DatabaseManagement

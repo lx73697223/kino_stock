@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
-
-"""数据库配置"""
+"""
+数据库配置
+"""
 
 import sqlalchemy
 from sqlalchemy.orm import sessionmaker

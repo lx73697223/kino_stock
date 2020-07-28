@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 
 def get_range_where_sql(start, end, column_name):

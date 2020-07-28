@@ -1,13 +1,11 @@
-# -*- coding: utf-8 -*-
-
 import traceback
 
 from com.kino.stock.configs.app_config import AppConfig
 from com.kino.stock.configs.message_config import MessageConfig
-from com.kino.stock.common_utils.annotation import async_exec
-from com.kino.stock.common_utils.logging_utils import LoggingUtil, log
-from email_message_sender import EmailMessageSender, EmailMessageInfo
-from open_wechat_message_sender import OpenWechatMessageSender, OpenWechatMessageInfo
+from com.kino.stock.utils.annotation import async_exec
+from com.kino.stock.utils.logging_utils import LoggingUtil, log
+from com.kino.stock.messaging.email_message_sender import EmailMessageSender, EmailMessageInfo
+from com.kino.stock.messaging.open_wechat_message_sender import OpenWechatMessageSender, OpenWechatMessageInfo
 
 
 logger = LoggingUtil.get_default_logger()

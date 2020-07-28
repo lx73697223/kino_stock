@@ -1,8 +1,7 @@
-
 import os
 import pandas
 
-from com.kino.stock.common_utils import file_utils
+from com.kino.stock.utils import file_utils
 
 
 def update_stock_bar_csv(file_path, kw_arg=None):

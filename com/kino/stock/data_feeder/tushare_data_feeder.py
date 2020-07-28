@@ -1,4 +1,3 @@
-
 """
 使用 Tushare 获取数据
 文档：https://tushare.pro/document/2
@@ -8,8 +7,8 @@ import sys
 import pandas
 import tushare as ts
 
-from com.kino.stock.common_utils.annotation import singleton
-from base_data_feeder import BaseDataFeeder
+from com.kino.stock.utils.annotation import singleton
+from com.kino.stock.data_feeder.base_data_feeder import BaseDataFeeder
 
 pandas.set_option('expand_frame_repr', False)   # 打印时不要折叠列
 pandas.set_option('display.max_rows', 200)      # 打印最多200行数据

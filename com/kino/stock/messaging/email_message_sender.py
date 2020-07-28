@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 发送邮件
 """
@@ -12,8 +10,8 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-from com.kino.stock.common_utils.annotation import singleton
-from message_sender import MessageSender, MessageInfo
+from com.kino.stock.utils.annotation import singleton
+from com.kino.stock.messaging.message_sender import MessageSender, MessageInfo
 
 
 class EmailMessageInfo(MessageInfo):

@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
 """
 迭代类工具函数
 """
 
 from collections.abc import Iterable
 
-from logging_utils import LoggingUtil
+from com.kino.stock.utils.logging_utils import LoggingUtil
 
 
 logger = LoggingUtil.get_default_logger()

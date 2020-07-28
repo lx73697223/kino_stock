@@ -1,9 +1,10 @@
-
-"""获取股票历史bar数据，存到数据库"""
+"""
+获取股票历史bar数据，存到数据库
+"""
 
 import sys
 
-from com.kino.stock.common_utils import time_utils
+from com.kino.stock.utils import time_utils
 from com.kino.stock.repository.dao import stock_bar_dao
 from com.kino.stock.repository.service import stock_bar_service
 

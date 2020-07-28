@@ -1,4 +1,3 @@
-
 """
 假设今天是7.8号
 先计算6.6到7.6这一个月“上涨”的成交量取平均值，忽略K线是下跌的成交量数据 一个月貌似太长了 10日数据 (是否要考虑阴线的成交量)
@@ -13,8 +12,8 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 from com.kino.stock.configs.local_config import load_local_config
+from com.kino.stock.strategy.base_strategy import BaseStrategy
 from com.kino.stock.repository.dao import stock_bar_dao, stock_dao
-from base_strategy import BaseStrategy
 
 pandas.set_option('expand_frame_repr', False)
 pandas.set_option('display.max_rows', 200)

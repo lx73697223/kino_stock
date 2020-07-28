@@ -1,13 +1,11 @@
-# -*- coding: utf-8 -*-
-
 """本地配置"""
 
 import os
 import json
 import traceback
 
-from com.kino.stock.common_utils.logging_utils import log
-from com.kino.stock.common_utils import file_utils, import_utils
+from com.kino.stock.utils import file_utils, import_utils
+from com.kino.stock.utils.logging_utils import log
 
 
 class LocalConfig(object):
