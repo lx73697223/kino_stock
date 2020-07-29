@@ -3,7 +3,7 @@ import pandas
 
 from com.kino.stock.configs.app_config import AppConfig
 from com.kino.stock.configs.local_config import LocalConfig
-from com.kino.stock.utils.logging_utils import LoggingUtil
+from com.kino.stock.utils.logging_utils import LoggingUtil, log
 from com.kino.stock.repository.dao import stock_dao, stock_bar_dao
 from com.kino.stock.data_feeder.tushare_data_feeder import TushareDataFeeder
 
@@ -11,6 +11,7 @@ from com.kino.stock.data_feeder.tushare_data_feeder import TushareDataFeeder
 logger = LoggingUtil.get_default_logger()
 
 
+@log(log_args=True)
 def sync_stock_bar(start_date, end_date, freq='D', adj='qfq', ts_codes=None, temp_to_csv=True):
     """
     同步股票K线数据

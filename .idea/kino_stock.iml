@@ -17,7 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/com/kino" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/com/kino/stock" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.8 (py38)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (venv-py38)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

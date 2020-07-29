@@ -15,34 +15,33 @@ if __name__ == '__main__':
     load_local_config()
 
     ts_codes = ["600519.SH"]
-    start_date = time_utils.delta_and_format_time(months=-12, _format="%Y%m%d")
+    start_date = time_utils.delta_and_format_time(months=-1, _format="%Y%m%d")
     end_date = time_utils.delta_and_format_time(_format="%Y%m%d")
     cci_thresh = 50
 
     bar_data = stock_bar_dao.get_stock_bar(ts_codes, start_date, end_date, freq="D", adj="qfq", order_by="trade_date")
-    print(bar_data)
 
     # 计算并画出cci
-    cci = talib.CCI(bar_data['high'].values, bar_data['low'].values, bar_data['close'].values, timeperiod=14)
-    print(cci)
+    bar_data.loc[:, 'cci'] = talib.CCI(bar_data['high'].values, bar_data['low'].values, bar_data['close'].values, timeperiod=14)
+    print(bar_data)
 
     # 简单择时策略，当cci>50则持仓，当cci<50则空仓
-    position = [cci_thresh if idx >= cci_thresh else 0 for idx in cci]
+    position = [cci_thresh if idx >= cci_thresh else 0 for idx in bar_data['cci']]
     print(position)
 
     # 绘制cci折线图
     cci_line = Line()
     cci_line.add_xaxis(bar_data['trade_date'])
     cci_line.add_yaxis(
-        'cci', cci,
-        # is_connect_nones=True,
+        'cci', bar_data['cci'],
+        is_connect_nones=True,
         # markpoint_opts=options.MarkPointOpts(data=[
             # options.MarkPointItem(type_='min'), options.MarkPointItem(type_='max'),
             # options.MarkLineItem(type_='average')
         # ])
     )
     cci_line.set_global_opts(
-        tooltip_opts=options.TooltipOpts(is_show=False),
+        # tooltip_opts=options.TooltipOpts(is_show=False),
         title_opts=options.TitleOpts(title='日K-CCI'),
         # xaxis_opts=options.AxisOpts(type_='value'),
         # yaxis_opts=options.AxisOpts(name='price', type_='value', is_scale=True,
@@ -61,7 +60,7 @@ if __name__ == '__main__':
     bar.render('/userdata/output_data/bar.html')
 
     # 将持仓和cci重叠在一个图中
-    cci_overlap = bar.overlap(cci_line)
+    cci_overlap = cci_line.overlap(bar)
     cci_overlap.render('/userdata/output_data/cci_bar.html')
 
     # 画出K线图
